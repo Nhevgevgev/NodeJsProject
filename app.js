@@ -6,14 +6,20 @@ const expressHbs = require('express-handlebars');
 
 const app = express();
 
-app.engine('hbs', expressHbs());
+app.engine(
+    'hbs',
+    expressHbs({
+        defaultLayout: 'main-layout',
+        layoutsDir: 'views/layouts/',
+        extname: 'hbs'
+    }));
 app.set('view engine', 'hbs');
 app.set('views', 'views');
 
 const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/admin', adminData.routes);
