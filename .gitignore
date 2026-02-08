@@ -1,0 +1,44 @@
+
+If you want, I can tailor this README to match your exact project structure — just tell me what folders/files you have.
+
+---
+
+# 🛡️ .gitignore for Node.js
+
+This is the standard `.gitignore` used in almost all Node.js projects:
+
+```gitignore
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Environment variables
+.env
+
+# Coverage directory
+coverage/
+
+# Build output
+dist/
+build/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# MacOS files
+.DS_Store
